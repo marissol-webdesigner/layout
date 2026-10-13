@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Jovens de Web Design Vocação</title> 
+    <link rel="stylesheet" href="o.css"> 
+    
+    <style>
+        /* 1. Definimos a animação de "surgir e subir" */
+        @keyframes animacaoEntrada {
+            from {
+                opacity: 0;
+                transform: translateY(30px); /* Começa 30px abaixo */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Termina na posição original */
+            }
+        }
+
+        /* 2. Aplicamos a animação nos cartões (cards) */
+        .card {
+            opacity: 0; /* Começa invisível para não dar "pulo" */
+            animation: animacaoEntrada 0.8s ease-out forwards;
+        }
+
+        /* 3. Efeito de delay (atraso) para um cartão aparecer depois do outro */
+        .card:nth-child(1) { animation-delay: 0.2s; }
+        .card:nth-child(2) { animation-delay: 0.5s; }
+        .card:nth-child(3) { animation-delay: 0.8s; }
+
+        /* 4. Efeito de movimento quando passar o mouse por cima (Hover) */
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease; /* Deixa o movimento do mouse suave */
+        }
+    </style>
+</head> 
+<body> 
+    <header> 
+        <h1>Jovens de Web - Vocação</h1> 
+        <p>Conheça algumas áreas da tecnologia!</p> 
+    </header> 
+    <main class="container"> 
+        <section class="card"> 
+            <h2>HTML</h2> 
+            <p> O HTML (HyperText Markup Language ou Linguagem de Marcação de Hipertexto) é a linguagem padrão usada para criar e estruturar o conteúdo de páginas na World Wide Web.</p> 
+        </section> 
+        <section class="card"> 
+            <h2>CSS</h2> 
+            <p> O CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata) é uma linguagem usada para definir a apresentação, o design, as cores e o layout visual de páginas web escritas em HTML.</p> 
+        </section> 
+        <section class="card"> 
+            <h2>JavaScript</h2> 
+            <p> JavaScript é uma linguagem de programação interpretada, de alto nível e com tipagem dinâmica, usada para criar páginas e aplicações web interativas.</p> 
+        </section> 
+    </main> 
+</body> 
+</html>

@@ -1,0 +1,58 @@
+/* Configurações globais e reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e650b95b;
+  color: #d6a7a7;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #790781;
+  color: #290606;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Área principal (Container dos cartões) */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Estilo dos cartões (cards) */
+.card {
+  background-color: #c079b6;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: #101820;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #1a1818;
+}
